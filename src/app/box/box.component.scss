@@ -1,0 +1,28 @@
+:host {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  cursor: pointer;
+  background-size: cover;
+
+  span {
+    position: absolute;
+    width: 300px;
+    height: 2px;
+   //background: url('assets/sticks/img2.jpg');
+    //background: var(--img);
+    background-size: cover;
+    pointer-events: none;
+    transition: 0.5s ease-in-out;
+
+  }
+
+  // &.active span {
+  //  transform: translate(var(--x)) rotate(var(--r));
+  //}
+
+
+}
+
+
+

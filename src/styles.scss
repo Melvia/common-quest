@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #363a3b;
+
+}
+//
+//
+//.container {
+//  position: relative;
+//  display: flex;
+//  gap: 50px;
+//}
+//.container .box {
+//  position: relative;
+//  height: 300px;
+//  width: 300px;
+//  cursor: pointer;
+//
+//}
+//
+//.container .box span {
+//  position: absolute;
+//  width: 300px;
+//  height: 2px;
+//  background: var(--img);
+//  background-size: cover;
+//  pointer-events: none;
+//  transition: 0.5s ease-in-out;
+//
+//}
+//
+//.container .box.active span {
+//  transform: translate(var(--x)) rotate(var(--r));
+//}
+
