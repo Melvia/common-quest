@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {SticksComponent} from "./sticks/sticks.component";
+import {ChartExampleComponent} from "./chart-example/chart-example.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, SticksComponent],
+  imports: [RouterOutlet, SticksComponent, ChartExampleComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
