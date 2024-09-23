@@ -38,6 +38,8 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 7. web-components если получится
 8. Content-children
 9. Рисовалку какую-нибудь или перетаскивание
+10. анимация свитербурга
+11. анимация/эффект бенгальких огней
 
 #Идеи
 Приложение для английского языка
