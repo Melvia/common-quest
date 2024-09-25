@@ -1,0 +1,18 @@
+
+<div>
+  <input type="password" [noStrengthCheck]="true" #evaluator="fieldRight">
+  Password is
+  @switch (evaluator.right) {
+    @case ('wrong')  {
+      <div>Wrong</div>
+    }
+    @case ('right')  {
+      <div>Right</div>
+    }
+  }
+<!--  <ng-container [ngSwitch]="evaluator.strength">-->
+<!--    <span *ngSwitchCase="'weak'">Weak</span>-->
+<!--    <span *ngSwitchCase="'medium'">Medium</span>-->
+<!--    <span *ngSwitchCase="'strong'">Strong</span>-->
+<!--  </ng-container>-->
+</div>
