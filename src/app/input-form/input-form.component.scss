@@ -1,0 +1,27 @@
+.password-strenght-weak + span {
+  color: red;
+  margin-left: 5px;
+}
+
+.password-strenght-medium + span  {
+  color: yellow;
+  margin-left: 5px;
+}
+.password-strenght-strong + span  {
+  color: green;
+  margin-left: 5px;
+}
+
+
+
+//
+//.password-strenght-weak {
+//  color: red;
+//}
+//
+//.password-strenght-medium {
+//  color: yellow;
+//}
+//.password-strenght-strong {
+//  color: green;
+//}

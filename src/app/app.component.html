@@ -2,4 +2,9 @@
 <!--<app-chart-example></app-chart-example>-->
 
 <!--<app-smoke-text></app-smoke-text>-->
-<app-input-form></app-input-form>
+<!--<app-input-form></app-input-form>-->
+
+<button pButton label="Toggle loading" (click)="loading = !loading"></button>
+<p-panel *loading="loading">
+  Learn more about Angular
+</p-panel>

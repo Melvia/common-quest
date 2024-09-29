@@ -1,0 +1,25 @@
+<p>loader works!</p>
+<div class="loading-container">
+  <ng-content/>
+  @if (loading) {
+    <div class="blocker">
+      <p-progressSpinner/>
+    </div>
+  }
+</div>
+<!--<app-loader [loading]="loading">-->
+<!--  <div class="p-grid">-->
+<!--    <div class="p-col-12">-->
+<!--      <p>Some content</p>-->
+<!--    </div>-->
+<!--    <app-loader [loading]="loading">-->
+<!--      <div class="p-col-12">-->
+<!--        <p>Some other content</p>-->
+<!--        <app-loader [loading]="loading">-->
+<!--          <div class="p-col-12">-->
+<!--            <p>Even more content</p>-->
+<!--          </div>-->
+<!--        </app-loader>-->
+<!--      </div>-->
+<!--    </app-loader>-->
+<!--  </div>-->

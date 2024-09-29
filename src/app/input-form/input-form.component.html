@@ -1,18 +1,16 @@
-
-<div>
-  <input type="password" [noStrengthCheck]="true" #evaluator="fieldRight">
-  Password is
-  @switch (evaluator.right) {
-    @case ('wrong')  {
-      <div>Wrong</div>
-    }
-    @case ('right')  {
-      <div>Right</div>
-    }
+<h1>Hello from {{name}}!</h1>
+<a target="_blank" href="https://angular.io/start">
+  Learn more about Angular
+</a>
+<input type="password" #evaluator="passwordStrength">
+@switch (evaluator.strength) {
+  @case ('weak') {
+    <div>Weak password</div>
   }
-<!--  <ng-container [ngSwitch]="evaluator.strength">-->
-<!--    <span *ngSwitchCase="'weak'">Weak</span>-->
-<!--    <span *ngSwitchCase="'medium'">Medium</span>-->
-<!--    <span *ngSwitchCase="'strong'">Strong</span>-->
-<!--  </ng-container>-->
-</div>
+  @case ('medium') {
+    <div>Medium password</div>
+  }
+  @case ('strong') {
+    <div>Strong password</div>
+  }
+}
