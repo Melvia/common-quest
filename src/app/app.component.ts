@@ -7,15 +7,18 @@ import {InputFormComponent} from "./input-form/input-form.component";
 import {LoaderComponent} from "./loader/loader.component";
 import {PanelModule} from "primeng/panel";
 import {LoadingDirective} from "./loading.directive";
+import {ClickOutsideDirective} from "./click-outside.directive";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, SticksComponent, ChartExampleComponent, SmokeTextComponent, InputFormComponent, LoaderComponent, PanelModule, LoadingDirective],
+  imports: [RouterOutlet, SticksComponent, ChartExampleComponent, SmokeTextComponent, InputFormComponent, LoaderComponent, PanelModule, LoadingDirective, ClickOutsideDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   loading = true;
-
+  onOutsideClick(){
+    console.log('click outside');
+  }
 }

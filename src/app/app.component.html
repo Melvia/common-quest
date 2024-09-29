@@ -4,7 +4,20 @@
 <!--<app-smoke-text></app-smoke-text>-->
 <!--<app-input-form></app-input-form>-->
 
-<button pButton label="Toggle loading" (click)="loading = !loading"></button>
-<p-panel *loading="loading">
+<!--<button pButton label="Toggle loading" (click)="loading = !loading"></button>-->
+<!--<p-panel *loading="loading">-->
+<!--  Learn more about Angular-->
+<!--</p-panel>-->
+
+
+<!--<div (clickOutside)="onOutsideClick()">-->
+<!--  <h1>Click outside of me!</h1>-->
+<!--</div>-->
+
+<a target="_blank" href="https://angular.io/start">
   Learn more about Angular
-</p-panel>
+</a>
+<div (clickAway)="onOutsideClick()">
+  <p>Text</p>
+  <button>Button</button>
+</div>
