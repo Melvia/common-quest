@@ -8,11 +8,12 @@ import {LoaderComponent} from "./loader/loader.component";
 import {PanelModule} from "primeng/panel";
 import {LoadingDirective} from "./loading.directive";
 import {ClickOutsideDirective} from "./click-outside.directive";
+import {ScrollIntoViewDirective} from "./scroll-into-view.directive";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, SticksComponent, ChartExampleComponent, SmokeTextComponent, InputFormComponent, LoaderComponent, PanelModule, LoadingDirective, ClickOutsideDirective],
+  imports: [RouterOutlet, SticksComponent, ChartExampleComponent, SmokeTextComponent, InputFormComponent, LoaderComponent, PanelModule, LoadingDirective, ClickOutsideDirective, ScrollIntoViewDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -20,5 +21,8 @@ export class AppComponent {
   loading = true;
   onOutsideClick(){
     console.log('click outside');
+  }
+  loadMoreContent() {
+    console.log('load more content');
   }
 }
