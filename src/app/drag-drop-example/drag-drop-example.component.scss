@@ -1,0 +1,18 @@
+.item {
+  width: 50px;
+  height: 100px;
+  background-color: #6495ED;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding:10px;
+  cursor: move;
+}
+
+.container {
+  width: 80vw;
+  height: 50vh;
+  background-color: aliceblue;
+}

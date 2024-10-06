@@ -9,11 +9,13 @@ import {PanelModule} from "primeng/panel";
 import {LoadingDirective} from "./loading.directive";
 import {ClickOutsideDirective} from "./click-outside.directive";
 import {ScrollIntoViewDirective} from "./scroll-into-view.directive";
+import {DragDropExampleComponent} from "./drag-drop-example/drag-drop-example.component";
+import {BarComponent} from "./d3/bar/bar.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, SticksComponent, ChartExampleComponent, SmokeTextComponent, InputFormComponent, LoaderComponent, PanelModule, LoadingDirective, ClickOutsideDirective, ScrollIntoViewDirective],
+  imports: [RouterOutlet, SticksComponent, ChartExampleComponent, SmokeTextComponent, InputFormComponent, LoaderComponent, PanelModule, LoadingDirective, ClickOutsideDirective, ScrollIntoViewDirective, DragDropExampleComponent, BarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
