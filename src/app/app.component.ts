@@ -11,11 +11,12 @@ import {ClickOutsideDirective} from "./click-outside.directive";
 import {ScrollIntoViewDirective} from "./scroll-into-view.directive";
 import {DragDropExampleComponent} from "./drag-drop-example/drag-drop-example.component";
 import {BarComponent} from "./d3/bar/bar.component";
+import {GridComponent} from "./grid/grid.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, SticksComponent, ChartExampleComponent, SmokeTextComponent, InputFormComponent, LoaderComponent, PanelModule, LoadingDirective, ClickOutsideDirective, ScrollIntoViewDirective, DragDropExampleComponent, BarComponent],
+  imports: [RouterOutlet, SticksComponent, ChartExampleComponent, SmokeTextComponent, InputFormComponent, LoaderComponent, PanelModule, LoadingDirective, ClickOutsideDirective, ScrollIntoViewDirective, DragDropExampleComponent, BarComponent, GridComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

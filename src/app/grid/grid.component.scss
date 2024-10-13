@@ -1,0 +1,50 @@
+.grid-container {
+  display: flex;
+  width: 370px;
+  flex-wrap: wrap;
+  //grid-template-columns: auto auto auto auto auto auto auto;
+  //grid-template-rows: auto auto auto auto auto auto auto;
+
+    .vertical-lattice {
+      width: 10px;
+      height: 50px;
+      background-color: orangered;
+    }
+
+    .vertical-lattice:hover {
+      background-color: darkred;
+    }
+    .horizontal-lattice {
+      width: 50px;
+      height: 10px;
+      background-color:  orangered;
+    }
+    .square-gap {
+      width: 10px;
+      height: 10px;
+      background-color: gold;
+    }
+
+    .horizontal-lattice:hover {
+      background-color: darkred;
+    }
+    .field {
+      width: 50px;
+      height: 50px;
+      &__picture {
+      background-color: goldenrod;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      }
+      &__lion {
+        background-image: url("assets/crowns-lions/lion.svg");
+      }
+      &__crown {
+        background-image: url("assets/crowns-lions/crown.svg");
+      }
+    }
+
+
+}
