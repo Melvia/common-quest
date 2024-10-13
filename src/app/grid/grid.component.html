@@ -1,23 +1,22 @@
 <div class="grid-container">
   @for (vitem of verticalBorders; track $index) {
-  @for (hitem of horizontalBorders; track $index) {
-        <div class="square-gap"></div>
-    @if ((hitem + 1) % (fieldSize + 1)  > 0) {
-      <div class="horizontal-lattice"></div>
-    }
+    @for (hitem of horizontalBorders; track $index) {
+      <div class="square-gap"></div>
+      @if ((hitem + 1) % (fieldSize + 1) > 0) {
+        <div class="horizontal-lattice" (click)="toggleClass($event)"></div>
+      }
 
-  }
-    @if (vitem < fieldSize ) {
+    }
+    @if (vitem < fieldSize) {
       @for (hitem of horizontalBorders; track $index) {
         <div class="vertical-lattice"></div>
-        @if ((hitem + 1) % (fieldSize + 1)  > 0) {
-          <div [ngClass]="{'field': true, 'field__lion': hasLionClass(hitem,vitem), 'field__crown': hasCrownClass(hitem,vitem), 'field__picture': hasCrownClass(hitem,vitem) || hasLionClass(hitem,vitem) }">
-<!--            <img src="./assets/crowns-lions/lion.png">-->
+        @if ((hitem + 1) % (fieldSize + 1) > 0) {
+          <div
+            [ngClass]="{'field': true, 'field__lion': hasLionClass(hitem,vitem), 'field__crown': hasCrownClass(hitem,vitem), 'field__picture': hasCrownClass(hitem,vitem) || hasLionClass(hitem,vitem) }">
           </div>
         }
       }
     }
-
   }
 </div>
 

@@ -39,6 +39,11 @@ export class GridComponent implements OnInit{
     return (!!this.crownCoords?.some(coord => coord[0]===x && coord[1]===y));
   }
 
+  toggleClass(e:) {
+
+    //classList.toggle('active');
+  }
+
 
 
 

@@ -11,7 +11,7 @@
       background-color: orangered;
     }
 
-    .vertical-lattice:hover {
+    .vertical-lattice.active {
       background-color: darkred;
     }
     .horizontal-lattice {
@@ -25,7 +25,7 @@
       background-color: gold;
     }
 
-    .horizontal-lattice:hover {
+    .horizontal-lattice.active {
       background-color: darkred;
     }
     .field {
@@ -44,6 +44,7 @@
       &__crown {
         background-image: url("assets/crowns-lions/crown.svg");
       }
+
     }
 
 
