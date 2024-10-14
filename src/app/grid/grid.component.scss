@@ -1,14 +1,15 @@
+$container: #e7ab4f;
+$lattice : darken($container, 5);
+
 .grid-container {
   display: flex;
   width: 370px;
   flex-wrap: wrap;
-  //grid-template-columns: auto auto auto auto auto auto auto;
-  //grid-template-rows: auto auto auto auto auto auto auto;
-
+  background-color: #e7ab4f;
     .vertical-lattice {
       width: 10px;
       height: 50px;
-      background-color: orangered;
+      background-color: $lattice;
     }
 
     .vertical-lattice.active {
@@ -17,12 +18,12 @@
     .horizontal-lattice {
       width: 50px;
       height: 10px;
-      background-color:  orangered;
+      background-color:  $lattice;
     }
     .square-gap {
       width: 10px;
       height: 10px;
-      background-color: gold;
+      background-color: inherit;
     }
 
     .horizontal-lattice.active {
@@ -31,8 +32,9 @@
     .field {
       width: 50px;
       height: 50px;
+      background-color: inherit;
       &__picture {
-      background-color: goldenrod;
+      background-color: inherit;
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
