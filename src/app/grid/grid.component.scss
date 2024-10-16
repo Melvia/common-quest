@@ -1,28 +1,31 @@
 $container: #e7ab4f;
-$lattice : darken($container, 5);
+$lattice-color : darken($container, 5);
+$lattice-width : 5px;
+$field-size: 70px;
+
 
 .grid-container {
   display: flex;
-  width: 370px;
+  width: $field-size * 6 + $lattice-width * 7;
   flex-wrap: wrap;
   background-color: #e7ab4f;
     .vertical-lattice {
-      width: 10px;
-      height: 50px;
-      background-color: $lattice;
+      width: $lattice-width;
+      height: $field-size;
+      background-color: $lattice-color;
     }
 
     .vertical-lattice.active {
       background-color: darkred;
     }
     .horizontal-lattice {
-      width: 50px;
-      height: 10px;
-      background-color:  $lattice;
+      width: $field-size;
+      height: $lattice-width;
+      background-color:  $lattice-color;
     }
     .square-gap {
-      width: 10px;
-      height: 10px;
+      width: $lattice-width;
+      height: $lattice-width;
       background-color: inherit;
     }
 
@@ -30,8 +33,8 @@ $lattice : darken($container, 5);
       background-color: darkred;
     }
     .field {
-      width: 50px;
-      height: 50px;
+      width: $field-size;
+      height: $field-size;
       background-color: inherit;
       &__picture {
       background-color: inherit;
