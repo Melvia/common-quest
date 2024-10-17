@@ -38,6 +38,12 @@ export class GridComponent implements OnInit {
     }
   }
 
+  //проверка на границы - они некликабельны
+
+  //обводка границ
+
+
+
   transformCoordsInOrderNumber(x: number, y: number) {
     return x + y * (FIELD_SIZE);
   }
