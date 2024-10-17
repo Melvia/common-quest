@@ -2,6 +2,10 @@ import {Component, OnInit} from '@angular/core';
 import {NgClass} from "@angular/common";
 
 const FIELD_SIZE = 6;
+type Direction = 'up' | 'right' | 'down' | 'left';
+type Coord = { x: number, y: number };
+
+//const directionsComplete = (coords: Coord): boolean => { return  }
 
 @Component({
   selector: 'app-grid',
@@ -18,7 +22,7 @@ export class GridComponent implements OnInit {
   crownCoords = [[2, 2], [3, 2], [2, 3], [3, 3]];
   fieldSize = FIELD_SIZE;
   //все координаты
-  coords: number[][][] = [];
+  coords: Coord[][] = [];
 
   verticalBorders: number[] = [];
   horizontalBorders: number[] = [];
@@ -28,9 +32,8 @@ export class GridComponent implements OnInit {
     for (let i = 0; i < this.fieldSize + 1; i++) {
       this.horizontalBorders.push(i);
       this.verticalBorders.push(i);
-      this.coords[i] = [];
       for (let j = 0; j < this.fieldSize + 1; j++) {
-        this.coords[i][j] = [i, j];
+        this.coords[i][j] = {x: i, y: j};
       }
     }
   }
@@ -52,6 +55,128 @@ export class GridComponent implements OnInit {
     e.target.classList.toggle('active');
 
   }
+
+  //преобразование координат в направления
+
+  //фигура замыкается TODO добавить расчет
+  figureIsComplete(): boolean {
+    return true;
+  }
+
+
+  rotate90(directions: Direction[]): Direction[] {
+    const newDirections = directions.map(direction => {
+      switch (direction) {
+        case 'up': {
+          return 'right';
+        }
+        case 'right': {
+          return 'down';
+        }
+        case 'down': {
+          return 'left';
+        }
+        default: {
+          return 'up';
+        }
+      }
+    });
+    return newDirections;
+  }
+
+  rotate270(directions: Direction[]): Direction[] {
+    const newDirections = directions.map(direction => {
+      switch (direction) {
+        case 'up': {
+          return 'left';
+        }
+        case 'right': {
+          return 'up';
+        }
+        case 'down': {
+          return 'right';
+        }
+        default: {
+          return 'down';
+        }
+      }
+    });
+    return newDirections;
+  }
+
+  rotate180(directions: Direction[]): Direction[] {
+    const newDirections = directions.map(direction => {
+      switch (direction) {
+        case 'up': {
+          return 'down';
+        }
+        case 'right': {
+          return 'left';
+
+        }
+        case 'down': {
+          return 'up';
+
+        }
+        default: {
+          return 'right';
+        }
+      }
+    });
+    return newDirections;
+  }
+
+  flipVertical(directions: Direction[]): Direction[] {
+    const newDirections = directions.map(direction => {
+      switch (direction) {
+        case 'up': {
+          return 'down';
+        }
+        case 'right': {
+          return 'right';
+
+        }
+        case 'down': {
+          return 'up';
+
+        }
+        default: {
+          return 'left';
+        }
+      }
+    });
+    return newDirections;
+  }
+
+  flipHorizontal(directions: Direction[]): Direction[] {
+    const newDirections = directions.map(direction => {
+      switch (direction) {
+        case 'up': {
+          return 'up';
+        }
+        case 'right': {
+          return 'left';
+        }
+        case 'down': {
+          return 'down';
+
+        }
+        default: {
+          return 'right';
+        }
+      }
+    });
+    return newDirections;
+  }
+
+  coordsToDirections(coords: Coord[]): Direction[] {
+    return [];
+  }
+
+
+//функция принадлежности объекта фигуре
+
+//расчет количества точек
 
 
 }
