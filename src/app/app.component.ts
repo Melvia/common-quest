@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 import {SticksComponent} from "./sticks/sticks.component";
 import {ChartExampleComponent} from "./chart-example/chart-example.component";
@@ -12,6 +12,7 @@ import {ScrollIntoViewDirective} from "./scroll-into-view.directive";
 import {DragDropExampleComponent} from "./drag-drop-example/drag-drop-example.component";
 import {BarComponent} from "./d3/bar/bar.component";
 import {GridComponent} from "./grid/grid.component";
+import {LocalStorageService} from "./shared/services/local-storage.service";
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,10 @@ import {GridComponent} from "./grid/grid.component";
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  private _localStorageService = inject(LocalStorageService);
+  public smth() {
+  //  this._localStorageService.get();
+  }
   loading = true;
   onOutsideClick(){
     console.log('click outside');
@@ -28,4 +33,6 @@ export class AppComponent {
   loadMoreContent() {
     console.log('load more content');
   }
+
+
 }
